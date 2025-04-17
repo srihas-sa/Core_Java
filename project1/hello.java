@@ -77,5 +77,7 @@ class hello {
     Outerrclass.Innerclass obj = new Outerrclass.Innerclass();
     System.out.print("srihas12");
 
+    System.out.print("srihas");
+    System.out.print("srihas12");
   }
 }
