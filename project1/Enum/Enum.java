@@ -12,8 +12,12 @@ public class Enum {
       }
 
     }
-    ;
+    for (Laptop lap : Laptop.values()) {
+      System.out.println(lap.ordinal());
+      System.out.println(lap.name());
+    }
     Laptop e1 = Laptop.Ideapad;
+
     System.out.print(e1.price);
   }
 }
