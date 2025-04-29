@@ -1,5 +1,7 @@
 package DSA.Trees;
 
+import java.util.ArrayList;
+
 class Node {
   int val;
   Node left;
@@ -28,12 +30,33 @@ public class Createtree {
     head.right.left = left3;
     head.right.right = right3;
     Node temp = head;
+
+    // Depth First Search
     System.out.println("InOrder");
     InorderTraversal(temp);
     System.out.println("PreOrder");
     PreOrderTraversal(temp);
     System.out.println("PostOrder");
     PostOrderTraversal(temp);
+
+    // Breadth First Search
+    ArrayList<Node> arr = new ArrayList<>();
+    arr.add(temp);
+    System.out.println("Bfs");
+    while (!arr.isEmpty()) {
+
+      if (temp.left != null) {
+        arr.add(temp.left);
+      }
+      if (temp.right != null) {
+        arr.add(temp.right);
+      }
+      System.out.println(temp.val);
+      arr.remove(temp);
+      if (arr.isEmpty())
+        break;
+      temp = arr.get(0);
+    }
 
   }
 
