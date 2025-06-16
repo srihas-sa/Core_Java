@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter ,faSquareInstagram} from "@fortawesome/free-brands-svg-icons";
 import Practice1 from './Practice1/Practice1';
+import Mind from './Mind/Mind';
 
 const App = () => {
   return (
@@ -27,10 +28,16 @@ const App = () => {
     <main className=" p-4 mb-5 w-full md:w-3/4 overflow-y-auto">
       <div className="">
         <Main />
+        
       </div>
     </main>
-
   </div>
+    
+  <div>
+    <Mind></Mind>
+  </div>
+
+  
 </div>
 
 
