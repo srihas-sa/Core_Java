@@ -32,11 +32,11 @@ const App = () => {
       </div>
     </main>
   </div>
-    
+  <section id="Mind">
   <div>
     <Mind></Mind>
   </div>
-
+    </section>
   
 </div>
 

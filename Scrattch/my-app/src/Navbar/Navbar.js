@@ -8,7 +8,7 @@ import Screenshot from '../Images/Screenshot.jpg'
 import './Navbar.css'
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'Mental', href: '#', current: false },
+  { name: 'Mental', href: '#Mind', current: false },
   { name: 'Phyical', href: '#', current: false },
   { name: 'Nutritional', href: '#', current: false },
   { name: 'Knowledge', href: '#', current: false },

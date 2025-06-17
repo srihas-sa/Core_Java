@@ -121,17 +121,24 @@ let unorderList=document.getElementById("unorderedListContainer");
   
 })
 let arr=[];
+document.addEventListener("DOMContentLoaded", function () {
+    // Your JS code here – safe to access DOM
+    arr=JSON.parse(localStorage.getItem("tasks"));
 
+  
 if(arr.length===0){
   const parenList=document.getElementById("ItemsTobeAdded");
  let li=document.createElement("li");
   li.textContent="Please Add something ";
   parenList.appendChild(li);
 }
-
+else{
+  renderList();
+}
 document.getElementById("ClickedOnAddButton").addEventListener("click",function (){
   let message=document.getElementById("Input").value;
   arr.push(message);
+  localStorage.setItem("tasks",JSON.stringify(arr));
   console.log(message)
   renderList();
   
@@ -144,6 +151,7 @@ console.log(element1.tagName);
 if(element1.tagName==="BUTTON"){
     const index = parseInt(event.target.getAttribute("data-index"));
     arr.splice(index, 1);
+    localStorage.setItem("tasks",JSON.stringify(arr));
     renderList();
     
 }
@@ -178,3 +186,5 @@ function renderList(){
   });
   document.getElementById("Input").value="";
 }
+
+});
